@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eaglercraft Encyclopedia</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a pixel font to mimic Minecraft -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- MAIN MENU -->
+    <div id="main-menu" class="screen active">
+        <h1 class="game-title">ENCYCLOPEDIA</h1>
+        <button id="btn-start" class="mc-button">Encyclopedia</button>
+    </div>
+
+    <!-- ENCYCLOPEDIA GUI (Search & Grid) -->
+    <div id="encyclopedia-screen" class="screen hidden">
+        <div class="gui-container">
+            <!-- Top Category Tabs -->
+            <div class="category-tabs">
+                <div class="tab tooltip-container" data-category="building">
+                    <img src="https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.12.2/assets/minecraft/textures/blocks/brick.png" alt="Building Blocks">
+                    <span class="tooltip">Building Blocks</span>
+                </div>
+                <div class="tab tooltip-container" data-category="decoration">
+                    <img src="https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.12.2/assets/minecraft/textures/blocks/double_plant_paeonia_top.png" alt="Decoration Blocks">
+                    <span class="tooltip">Decoration Blocks</span>
+                </div>
+                <!-- Search Bar Area -->
+                <div class="search-container">
+                    <label>Search Items</label>
+                    <input type="text" id="search-bar" placeholder="">
+                </div>
+            </div>
+
+            <!-- Block Grid (Default view) -->
+            <div id="block-grid" class="inventory-grid">
+                <!-- Example Block Container (JS will generate these later) -->
+                <div class="block-slot tooltip-container">
+                    <img src="https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.12.2/assets/minecraft/textures/blocks/double_plant_grass_top.png" alt="Double Tallgrass">
+                    <div class="tooltip block-tooltip">
+                        <span class="block-name">Double Tallgrass</span><br>
+                        <span class="block-category">Decoration Blocks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAILS & RECIPE PAGE -->
+    <div id="details-screen" class="screen hidden">
+        <div class="gui-container details-container">
+            <button id="btn-back" class="mc-button">Back to Search</button>
+            <div id="block-info-area">
+                <h2 id="detail-name">Block Name</h2>
+                <img id="detail-image" src="" alt="">
+                <p id="detail-description">Block information will go here.</p>
+                <div class="recipe-box">
+                    <h3>Crafting Recipe</h3>
+                    <div id="recipe-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
